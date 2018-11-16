@@ -1,0 +1,23 @@
+/* Made with love by Mutiullah Samim*/
+
+.background {
+    background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container {
+    height: 100%;
+    align-content: center;
+}
+
+.card {
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.card-header h3 {
+    color: rgb(20,20,20);
+}
