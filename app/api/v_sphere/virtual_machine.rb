@@ -325,7 +325,7 @@ module VSphere
     end
 
     def users=(ids)
-      GitHelper.open_repository(Puppetscript.puppet_script_path) do |git_writer|
+      GitHelper.open_repository(Puppetscript.puppet_script_path, for_write: true) do |git_writer|
         name_script, node_script = user_name_and_node_script(ids)
         git_writer.write_file(name_path, name_script)
         git_writer.write_file(node_path, node_script)
@@ -359,7 +359,7 @@ module VSphere
     end
 
     def sudo_users=(ids)
-      GitHelper.open_repository(Puppetscript.puppet_script_path) do |git_writer|
+      GitHelper.open_repository(Puppetscript.puppet_script_path, for_write: true) do |git_writer|
         name_script, node_script = sudo_name_and_node_script(ids)
         git_writer.write_file(name_path, name_script)
         git_writer.write_file(node_path, node_script)
